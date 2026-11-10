@@ -1,0 +1,2 @@
+Coloque aqui os prints reais: 401.png, 403.png, 422.png, rede.png, gmail.png e outlook.png.
+Os prints ainda precisam ser feitos após configurar e testar o projeto.

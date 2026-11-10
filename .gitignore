@@ -1,0 +1,8 @@
+# Segredos e dados privados
+/config.php
+/envios.log
+
+# Dependências e arquivos locais
+/vendor/
+/.DS_Store
+Thumbs.db

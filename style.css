@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #080f1d;
+  --panel: #111d31;
+  --panel-border: #263954;
+  --text: #f3f6fc;
+  --muted: #9cacc3;
+  --accent: #70a7ff;
+  --accent-strong: #367df0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(54,125,240,.19), transparent 38%),
+    radial-gradient(ellipse at 90% 85%, rgba(51,190,174,.10), transparent 32%),
+    var(--bg);
+}
+.page-shell {
+  width: min(100% - 32px, 680px);
+  margin: 0 auto;
+  padding: 54px 0 24px;
+}
+.contact-card {
+  padding: clamp(26px, 6vw, 48px);
+  background: linear-gradient(145deg, rgba(20,34,56,.98), rgba(13,24,41,.98));
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  box-shadow: 0 28px 80px rgba(0,0,0,.34);
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 27px;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #5e9bff, #2865d9);
+  box-shadow: 0 10px 28px rgba(54,125,240,.28);
+}
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .19em;
+}
+h1 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 6vw, 43px);
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+.intro {
+  max-width: 510px;
+  margin: 16px 0 30px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+}
+.field { margin-bottom: 21px; }
+label {
+  display: block;
+  margin-bottom: 9px;
+  color: #e5edf9;
+  font-size: 13px;
+  font-weight: 600;
+}
+.optional { color: var(--muted); font-weight: 400; }
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 15px;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  background: #0b1628;
+  border: 1px solid #2a3d59;
+  border-radius: 11px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(112,167,255,.13);
+}
+input::placeholder, textarea::placeholder { color: #71829b; }
+textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+input[type="file"] { padding: 11px; color: var(--muted); }
+input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 12px;
+  color: #dce9ff;
+  background: #203858;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+small {
+  display: block;
+  margin-top: 7px;
+  color: #8293ac;
+  font-size: 11px;
+  line-height: 1.5;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 15px 20px;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(110deg, #397eea, #2864d1);
+  border: 0;
+  border-radius: 11px;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(40,100,209,.22);
+  transition: transform .2s, filter .2s;
+}
+button:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.privacy-note {
+  margin: 22px 0 0;
+  color: #8293ac;
+  text-align: center;
+  font-size: 11px;
+}
+.privacy-note span { color: #5bd0a7; font-size: 9px; margin-right: 5px; }
+footer {
+  padding: 22px 8px 0;
+  color: #687b95;
+  text-align: center;
+  font-size: 11px;
+}
+.result-card { text-align: center; }
+.result-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  color: #fff;
+  background: #1d8a68;
+  font-size: 28px;
+}
+.result-icon.error { background: #a94b58; }
+.result-card .intro { margin-left: auto; margin-right: auto; }
+.result-card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  background: #286bdc;
+  border-radius: 10px;
+}
+.protocol { color: #8293ac; font-size: 11px; overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .page-shell { padding-top: 22px; }
+  .contact-card { border-radius: 18px; }
+}

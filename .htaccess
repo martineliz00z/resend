@@ -1,0 +1,7 @@
+# Protege arquivos que não devem ser acessados diretamente pelo navegador.
+<FilesMatch "^(config\.php|config\.exemplo\.php|envios\.log|\.gitignore)$">
+    Require all denied
+</FilesMatch>
+
+# Impede listagem do conteúdo da pasta.
+Options -Indexes

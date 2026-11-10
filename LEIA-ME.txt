@@ -1,0 +1,41 @@
+PROJETO RESEND — LEIA ANTES DE EXECUTAR
+
+1. Extraia a pasta SEUNOME_resend para:
+   C:\xampp\htdocs\
+
+2. Dentro da pasta, copie config.exemplo.php e renomeie a cópia para:
+   config.php
+
+3. Abra config.php e preencha:
+   - api_key: sua chave privada do Resend (começa com re_)
+   - destino: o MESMO e-mail cadastrado na sua conta Resend
+   Não compartilhe esse arquivo e não o coloque no ZIP de entrega.
+
+4. Abra o XAMPP e inicie o Apache. O MySQL não é necessário.
+
+5. Acesse no navegador:
+   http://localhost/SEUNOME_resend/
+
+6. Faça um teste enviando para seu próprio e-mail cadastrado no Resend.
+   Com onboarding@resend.dev, o modo de teste só permite entregar para o e-mail da própria conta.
+
+7. Confira o painel do Resend em Logs e o arquivo envios.log, criado automaticamente.
+
+IMPORTANTE SOBRE OS TESTES DO DESAFIO 3
+- 401: altere temporariamente um caractere da chave em config.php, envie e depois restaure a chave correta.
+- 403: o código de confirmação pode falhar em modo de teste porque tenta enviar ao visitante. Para testar a mensagem 403 na tela, altere temporariamente o destino fixo para outro e-mail, envie e depois restaure.
+- 422: no enviar.php, remova temporariamente a linha 'subject' => ... do array $dados principal, envie e depois restaure a linha.
+- Rede: desligue o Wi-Fi, envie e depois ligue novamente.
+Tire os prints dos resultados reais e salve em prints/.
+
+TESTE DO HTML
+- Faça um envio real para sua conta.
+- Abra o e-mail no Gmail e tire um print.
+- Para Outlook, use uma conta Outlook/Outlook.com ou o Outlook disponibilizado pela escola; abra a mensagem e tire outro print.
+- Salve como prints/gmail.png e prints/outlook.png.
+
+SEGURANÇA
+- Nunca coloque sua chave em index.html, style.css, RELATORIO.md, prints ou no ZIP.
+- Não envie config.php, envios.log ou vendor/.
+- O anexo aceita PDF, PNG e JPG/JPEG até 5 MB.
+- O projeto usa cURL e PHP 8+. Se houver erro de certificado SSL no XAMPP, consulte o material da aula para configurar curl.cainfo no php.ini e reinicie o Apache.
